@@ -10,7 +10,7 @@
 }
 
 .halo-gradient {
-  background: radial-gradient(ellipse at top , var(--color-linear) -45%, var(--color-background) 35%);
+  background: radial-gradient(ellipse at top , var(--color-impact) -65%, var(--color-background) 25%);
 }
 
 body {

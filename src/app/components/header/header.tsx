@@ -1,9 +1,12 @@
+import NavMenu from "./NavMenu";
+
 const Header = () => {
     return (
-        <header>
-            <nav>
-                <p>Header</p>
-            </nav>
+        <header className="">
+            <div className= "flex-initial">
+            <h2> メタ レオポルド アントワネ</h2>
+            <NavMenu />
+            </div>
         </header>
     );
 };

@@ -1,7 +1,17 @@
-const Contact = () => {
+import React, { ReactNode } from 'react';
+
+interface ContactProps {
+    children: ReactNode;
+    id: string;
+}
+
+
+const Contact = ({children, id}:ContactProps) => {
     return (
         <>
-         <p>contact</p>
+        <section id={id}>
+        {children}
+        </section>
         </>
     );
 }

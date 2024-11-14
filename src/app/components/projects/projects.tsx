@@ -1,7 +1,17 @@
-const projects = () => {
+import React, { ReactNode } from 'react';
+
+interface ProjectsProps {
+    children: ReactNode;
+    id: string;
+}
+
+
+const projects = ({children, id}:ProjectsProps) => {
     return (
         <>
-        <p>projects</p>
+        <section id={id}>
+        {children}
+        </section>
         </>
     );
 }

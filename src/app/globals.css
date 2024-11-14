@@ -5,12 +5,12 @@
 :root {
   --color-background: #29292d;
   --color-primary: #f8f7f8;
-  --color-impact: #90a0d2;
+  --color-impact: #e25651;
   --color-linear: #ecefdc;
 }
 
 .halo-gradient {
-  background: radial-gradient(ellipse at top , var(--color-impact) -65%, var(--color-background) 25%);
+  background: radial-gradient(ellipse at top , var(--color-impact) -65%, var(--color-background) 35%);
 }
 
 body {
@@ -18,4 +18,15 @@ body {
   font-family: var(--font-noto-sans-jp);
   background-color: var(--color-background);
   
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-x-180 {
+  transform: rotateX(180deg);
 }

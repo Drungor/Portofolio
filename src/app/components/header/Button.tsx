@@ -1,12 +1,23 @@
-const Button = ({children,href, id}) => {
+import React, { ReactNode } from 'react';
+
+interface ButtonProps {
+    children: ReactNode;
+    id?: string;
+    onClick?: () => void;
+    className?: string;
+}
+
+const Button = ({children, id, onClick, className}: ButtonProps) => {
+
     return (
-            <li>
-            <a
-            id={id}
-            href={href} 
-            className="">
-                {children}
-            </a>
+            <li >
+                <button
+                onClick={onClick ? onClick : undefined}
+                id={id? id : undefined}
+                className={className ? className : "text-white hover:text-impact"}
+                >
+                    {children}
+                </button>
             </li>
     )
 }

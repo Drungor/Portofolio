@@ -15,8 +15,6 @@ export default function Home() {
       <Projects />
       <Resume />
       <Contact />
-      <p>jena remmbhwekbwe</p>
-      <div>eeee</div>
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 const Presentation = () => {
     return (
-        <p>presentation</p>
+        <p>hero</p>
     );
 }
 

@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         background: "var(--color-background)",
-        primary: "var(--color-primary-500)",
+        primary: "var(--color-primary)",
         impact: "var(--color-impact)",
         linear: "var(--color-linear)",
       },

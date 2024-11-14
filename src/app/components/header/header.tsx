@@ -1,5 +1,6 @@
 "use client";
-import Button from './Button';
+import { Link } from 'react-scroll';
+import LinkNav from './LinkNav';
 import { useState } from 'react';
 
 const Header = () => {
@@ -24,14 +25,14 @@ const Header = () => {
                     <span className="block">Leopold Antoine Maitre </span>
                 </div>
                 <div
-               className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+               className={`absolute inset-0 flex items-center justify-left transition-all duration-500 ${
                 logoLanguage ? "translate-y-full opacity-40" : "-translate-y-0 opacity-100"
               }`}
                 >
                     <span className="block">メタ　レオポルド　アントワネ</span>
             </div>
             </div>
-            
+
            {/* mobile view */}
             <button
                 className="md:hidden flex items-center"
@@ -56,9 +57,9 @@ const Header = () => {
             {/* dekstop view*/}
             <nav className="hidden md:flex">
                 <ul className="flex flex-row gap-6">
-                    <Button  id="projects">プロジェクト</Button>
-                    <Button  id="resume">経歴</Button>
-                    <Button  id="contact">コンタクト</Button>
+                    <LinkNav  to="projects">プロジェクト</LinkNav>
+                    <LinkNav  to="resume">経歴</LinkNav>
+                    <LinkNav  to="contact">コンタクト</LinkNav>
                 </ul>
             </nav>
 
@@ -66,21 +67,21 @@ const Header = () => {
             {isMenuOpen && (
                 <nav className="md:hidden absolute top-16 left-0 w-full bg-transparent">
                     <ul className="flex flex-col items-end gap-4 p-4">
-                        <Button 
+                        <LinkNav 
                         onClick={closeMenuOnCellphone}
-                        id="projects">
+                        to="projects">
                             プロジェクト
-                        </Button>
-                        <Button 
+                        </LinkNav>
+                        <LinkNav 
                         onClick={closeMenuOnCellphone}
-                        id="resume">
+                        to="resume">
                             経歴
-                        </Button>
-                        <Button 
+                        </LinkNav>
+                        <LinkNav 
                         onClick={closeMenuOnCellphone}
-                        id="contact">
+                        to="contact">
                             コンタクト
-                        </Button>
+                        </LinkNav>
                     </ul>
                 </nav>
             )}

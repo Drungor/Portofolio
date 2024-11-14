@@ -12,9 +12,9 @@ export default function Home() {
     <div className="container mx-auto halo-gradient text-white p-4 py-4">
       <Header />
       <Presentation />
-      <Projects />
-      <Resume />
-      <Contact />
+      <Projects id="projects" />
+      <Resume id="resume" />
+      <Contact id="contact"/>
       <Footer />
     </div>
   );

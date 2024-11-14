@@ -1,25 +1,26 @@
 import React, { ReactNode } from 'react';
+import {Link} from 'react-scroll';
 
-interface ButtonProps {
+interface LinkProps {
     children: ReactNode;
-    id?: string;
     onClick?: () => void;
     className?: string;
+    to: string;
 }
 
-const Button = ({children, id, onClick, className}: ButtonProps) => {
+const LinkNav = ({children, onClick, className, to}: LinkProps) => {
 
     return (
             <li >
-                <button
+                <Link
+                to={to}
                 onClick={onClick ? onClick : undefined}
-                id={id? id : undefined}
                 className={className ? className : "text-white hover:text-impact"}
                 >
                     {children}
-                </button>
+                </Link>
             </li>
     )
 }
 
-export default Button;
+export default LinkNav;

@@ -1,5 +1,3 @@
-"use client";
-
 import { ReactNode } from "react";
 import Provider from "./providers" ;
 import "./globals.css";
@@ -14,6 +12,8 @@ const notoSansJP = Noto_Sans_JP({
 interface RootLayoutProps {
   children: ReactNode;
 }
+
+console.log("Rendering the children of RootLayout");
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (

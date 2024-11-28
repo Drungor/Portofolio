@@ -10,11 +10,11 @@ import Contact from "./components/contact/contact";
 import "./globals.css";
 
 const fadeInVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { ease: "easeOut", duration: 0.3 },
+    transition: {ease: "easeOut", duration: 0.5 },
   },
 };
 

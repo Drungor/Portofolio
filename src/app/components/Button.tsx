@@ -12,7 +12,6 @@ const Button: React.FC<ButtonProps> = ({children, className,noLeftMargin, ...pro
     return (
         <button 
             className= {clsx(`
-                rounded-xl
                 m-2
                 px-2
                 py-1

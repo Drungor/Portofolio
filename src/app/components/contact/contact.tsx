@@ -9,12 +9,14 @@ interface ContactProps {
 const Contact = ({id}:ContactProps) => {
 
     const insistOnWords = 'text-li300 dark:text-impact300 font-medium'
-    const classNameButton = `text-xl sm:text-2xl md:text-3xl lg:text-4xl 
-    px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5
-    border border-li300 dark:border-impact300 rounded-none
-    hover:border-li dark:hover:border-impact
-    justify-center items-center
-    pr-2`
+    const classNameButton = `
+        text-xl sm:text-2xl md:text-3xl lg:text-4xl 
+        px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5
+        border border-li300 dark:border-impact300
+        hover:border-li dark:hover:border-impact
+        justify-center items-center
+        pr-2
+        `
 
     return (
     <>
@@ -23,7 +25,7 @@ const Contact = ({id}:ContactProps) => {
         className='mb-10'>
             <div>
             <h2 className="text-2xl lg:text-3xl sm:mb-6">コンタクト</h2>
-                <section className='grid grid-flow-row  md:grid-flow-col md:grid-cols-2 gap-4 sm:gap-6'>
+                <div className='grid grid-flow-row  md:grid-flow-col md:grid-cols-2 gap-4 sm:gap-6'>
                     <div className="text-lg sm:block">
                         <p>
                         私は現在、福岡でフロントエンド開発者として働ける仕事を探しています。<br/>
@@ -44,7 +46,7 @@ const Contact = ({id}:ContactProps) => {
                             <a href="/メタ職務経歴書.pdf"  target="_blank" rel="noopener noreferrer">職務経歴書</a>
                         </Button>
                     </div>
-                </section>   
+                </div>   
             </div>
         </section>
     </>

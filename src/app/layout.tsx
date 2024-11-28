@@ -1,5 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
-import Provider from "./providers" ;
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Noto_Sans_JP } from "next/font/google";
 import clsx from "clsx";
@@ -13,16 +15,34 @@ interface RootLayoutProps {
   children: ReactNode;
 }
 
-console.log("Rendering the children of RootLayout");
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-      <html lang="ja" className={clsx(notoSansJP.variable, "font-sans")} suppressHydrationWarning>
-        <head>
-        </head>
-        <body>
-        <Provider>{children}</Provider>
-        </body>
-      </html>
+    <html
+      lang="ja"
+      className={clsx(notoSansJP.variable, "font-sans")}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Script to preload theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const systemTheme = prefersDark ? 'dark' : 'light';
+                document.documentElement.classList.add(theme || systemTheme);
+                document.documentElement.style.colorScheme = theme || systemTheme;
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

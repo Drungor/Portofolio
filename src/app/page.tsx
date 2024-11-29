@@ -97,7 +97,7 @@ export default function Home() {
         <section className="relative h-[60px]">
           <div
             id="halo-bottom"
-            className="halo-gradient-bottom absolute bottom-0 left-0 w-full h-[60px]"
+            className="halo-gradient-bottom absolute bottom-0 left-0 w-full h-full overflow-visible"
           ></div>
         </section>
       </div>

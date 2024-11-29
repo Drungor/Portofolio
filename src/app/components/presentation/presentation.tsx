@@ -11,7 +11,7 @@ const Presentation: React.FC = () => {
         id="small-presentation" 
         className="text-xl col-span-6 md:self-center ml-0 pl-0"
         >
-          <h2 className="text-2xl lg:text-3xl sm:mb-6">プログラミング言語</h2>
+          <h2 className="text-2xl lg:text-3xl sm:mb-6 mt-4 mb-6 md:mb-6 sm:mt-0">プログラミング言語</h2>
           <div className="text-lg hidden sm:block">
             <p>
               2023年9月からコーディングの勉強とウェブサイトの開発を始めました。<br />

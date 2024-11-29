@@ -97,7 +97,7 @@ const Header = () => {
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     exit={{ opacity: 0, y: -5 }}
                     ref={menuRef} // Attach ref to the mobile menu
-                    className="md:hidden absolute top-24 left-5 w-auto backdrop-blur-sm dabg-black/5 border border-li dark:border-impact"
+                    className="md:hidden absolute top-24 left-5 w-auto backdrop-blur-sm dabg-black/5 border border-li300 dark:border-impact300 border-opacity-40 shadow-md"
                 >
                         <motion.ul
                         className="flex flex-row items-start gap-4 p-4">

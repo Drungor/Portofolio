@@ -1,4 +1,5 @@
 const { label } = require('framer-motion/client');
+const { blob } = require('stream/consumers');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +12,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      animation: {
+        blob: "blob 12s infinite",
+      },
+
+      keyframes:{
+        blob: {
+          "0%" : {transform: "scale(1)"},
+          "20%": {transform: "scale(1.1)"},
+          "40%": {transform: "scale(1.2)"},
+          "60%": {transform: "scale(1.1)"},
+          "80%": {transform: "scale(0.9)"},
+          "100%": {transform: "scale(1)"}
+        },
+
+      },
+
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to bottom, #f7fbfb, #324e64)',
       },

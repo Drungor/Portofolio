@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .animation-delay-2000{
+    animation-delay: 2000ms;
+  }
+}
 
 :root {
   --color-background: #29292d;
@@ -34,7 +39,7 @@
       rgba(var(--color-impact-rgb-light), 0.02) 60%,
       rgba(var(--color-impact-rgb-light), 0) 100%
     ),
-    radial-gradient(ellipse at top, var(--color-impact-light) -65%, var(--color-background-light) 35%);
+    radial-gradient(ellipse at top, var(--color-impact-light) -65%, transparent 35%);
   --halo-gradient-bottom: linear-gradient(
       180deg,
       rgba(var(--color-impact-rgb-light), 0) 0%,
@@ -43,7 +48,7 @@
       rgba(var(--color-impact-rgb-light), 0.09) 100%,
       rgba(var(--color-impact-rgb-light), 0) 100%
     ),
-    radial-gradient(ellipse at bottom, var(--color-impact-light) -85%, var(--color-background-light) 35%);
+    radial-gradient(ellipse at bottom, var(--color-impact-light) -85%, transparent 35%);
 }
 
 /* Dark gradient */
@@ -56,7 +61,7 @@
       rgba(var(--color-impact-rgb), 0.02) 60%,
       rgba(var(--color-impact-rgb), 0) 100%
     ),
-    radial-gradient(ellipse at top, var(--color-impact) -65%, var(--color-background) 35%);
+    radial-gradient(ellipse at top, var(--color-impact) -65%, transparent 35%);
   --halo-gradient-bottom: linear-gradient(
       180deg,
       rgba(var(--color-impact-rgb), 0) 0%,
@@ -65,7 +70,7 @@
       rgba(var(--color-impact-rgb), 0.09) 100%,
       rgba(var(--color-impact-rgb), 0) 100%
     ),
-    radial-gradient(ellipse at bottom, var(--color-impact) -85%, var(--color-background) 35%);
+    radial-gradient(ellipse at bottom, var(--color-impact) -85%, transparent 35%);
 }
 
 

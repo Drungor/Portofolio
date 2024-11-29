@@ -89,15 +89,15 @@ export default function Home() {
             variants={fadeInVariants}
             initial="hidden"
             animate={isFooterInView ? "visible" : "hidden"}
-            className="relative text-li300 dark:text-impact300"
+            className=" text-li300 dark:text-impact300"
           >
             <h2 className="justify-center opacity-80">🌐 レオポルド・メートル作成</h2>
           </motion.footer>
         </div>
-        <section className="relative h-[60px]">
+      <section className="relative h-[60px]">
           <div
             id="halo-bottom"
-            className="halo-gradient-bottom absolute bottom-0 left-0 w-full h-full overflow-visible"
+            className="halo-gradient-bottom  h-full overflow-visible"
           ></div>
         </section>
       </div>

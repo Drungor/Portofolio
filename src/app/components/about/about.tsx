@@ -29,22 +29,19 @@ const about = ({id}:aboutProps) => {
                     <div className='flex flex-col gap-4 sm:gap-6 lg:col-span-1'>
                         <div className="text-lg sm:block ">
                             <p>
-                            私は現在、福岡でフロントエンド開発者として働ける仕事を探しています<br/>
-                            <span className={insistOnWords} >HTML、CSS、JavaScript </span>を中心に、
-                            <span className={insistOnWords}>ReactやTailwind CSS </span>を使用したプロジェクト
-                            を友人と取り組んできました。
-                            また、<span className={insistOnWords}>PhotoshopやFigma </span>の知識を活かし、デザイン
-                            の意図を正確にコードに反映できます。<br/>
-                            <span className={insistOnWords}>フランス語、英語、日本語 </span>の三言語を話せるため、
-                            国際的な環境でも柔軟に対応可能です。学習意欲が高く、成長しながら貢献したいと考えています。
+                            現在、福岡でフロントエンドエンジニアとして働ける仕事を探しています。<br/>
+                            <span className={insistOnWords} >HTML、CSS、JavaScript </span>を中心に、<span className={insistOnWords}>React</span> や <span className={insistOnWords}>Tailwind CSS </span>を使用したプロジェクトを友人と取り組んでいます。
+                            また、<span className={insistOnWords}>Photoshop </span>や <span className={insistOnWords}>Figma </span> の知識を活かし、デザイナーのニードに的確に応えることができます。
+                            また、<span className={insistOnWords}>フランス語、英語、日本語 </span> の三言語を話せるため、 国際的な環境でも柔軟に対応可能です。<br/>
+                            就職後も継続的に学習し、成長しながら会社に貢献していきたいと考えています。
                             </p>
                         </div>
                         <div className='flex flex-col md:flex-row justify-left gap-2 lg:gap-6'>
                             <Button noLeftMargin className={classNameButton}>
-                                <a className="pl-2" href="/メタ履歴書.pdf"  download>履歴書</a>
+                                <a className="pl-2" href="/履歴書.pdf"  download>履歴書</a>
                             </Button>
                             <Button noLeftMargin className={classNameButton}>
-                                <a className="pl-2" href="/メタ職務経歴書.pdf"  download>職務経歴書</a>
+                                <a className="pl-2" href="/職務経歴書.pdf"  download>職務経歴書</a>
                             </Button>
                         </div>
                     </div>

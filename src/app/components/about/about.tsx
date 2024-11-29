@@ -63,7 +63,7 @@ const about = ({id}:aboutProps) => {
                         <div 
                         className='
                         absolute 
-                        top-0 -right-4
+                        top-0.5 -right-1.5
                         w-64 h-48 
                         bg-li300 dark:bg-impact300
                          rounded-full filter blur-2xl

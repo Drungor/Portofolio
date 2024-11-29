@@ -29,12 +29,7 @@ export default function Home() {
   const isContactInView = useInView(contactRef, { once: true, margin: "-50px" });
   const isFooterInView = useInView(footerRef, { once: true, margin: "-10px" });
 
-  console.log("isProjectsInView:", isProjectsInView);
-  console.log("isContactInView:", isContactInView);
-  console.log("isFooterInView:", isFooterInView);
-
   useEffect(() => {
-    console.log("useEffect triggered after component mounted");
     document.body.setAttribute("data-animation-ready", "true");
   }, []);
 

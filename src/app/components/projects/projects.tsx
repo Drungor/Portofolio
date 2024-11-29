@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import CardProject from './CardProject';
-import ButtonHalo from '../ButtonHalo';
 import projectData from '../../data/projectData';
 
 interface ProjectsProps {

@@ -96,7 +96,7 @@ export default function Home() {
             animate={isFooterInView ? "visible" : "hidden"}
             className="relative text-li300 dark:text-impact300"
           >
-            <h2 className="justify-center">Made With ❤ by leopold maitre</h2>
+            <h2 className="justify-center opacity-80">🌐 レオポルド・メートル作成</h2>
           </motion.footer>
         </div>
         <section className="relative h-[60px]">

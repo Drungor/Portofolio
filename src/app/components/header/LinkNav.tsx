@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import {Link} from 'react-scroll';
+import clsx from 'clsx';
 
 interface LinkProps {
     children: ReactNode;
@@ -11,20 +12,23 @@ interface LinkProps {
     offset?: number;
 }
 
-const LinkNav = ({children, onClick, to}: LinkProps) => {
+
+const LinkNav = ({className , children, onClick, to}: LinkProps) => {
     return (
-            <li >
+
                 <Link
                 to={to}
                 smooth={true}
                 duration={700}
                 offset={-100}
                 onClick={onClick ? onClick : undefined}
-                className="text-lt dark:text-primary hover:text-li dark:hover:text-impact cursor-pointer"
+                className= {clsx(`
+                    text-lt dark:text-primary hover:text-li dark:hover:text-impact 
+                    cursor-pointer`
+                    ,className)}
                 >
                     {children}
                 </Link>
-            </li>
     )
 }
 

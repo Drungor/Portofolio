@@ -1,40 +1,60 @@
 "use client";
 
 import LinkNav from './LinkNav';
-import { useState } from 'react';
-import { useTheme } from 'next-themes';
+import { useState, useEffect, useRef } from 'react';
 import LightSwitchButton from './LightSwitchButton';
+import { motion, AnimatePresence } from 'motion/react'
+
+
 
 const Header = () => {
     const [logoLanguage, setLogoLanguage] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [Open, setOpen] = useState(false);
+
+    const menuRef = useRef<HTMLDivElement>(null); // Create a ref for the mobile menu
 
     const closeMenuOnCellphone = () => {
-        setIsMenuOpen(false);
+        setOpen(false);
     };
-    
-    const {theme, setTheme} = useTheme();
+
+    // Close menu when clicking outside
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
 
     return (
         <header className="flex flex-row items-center justify-between mt-8 mb-12 md:mb-16">
             {/* Mobile Menu Button */}
-            <button
-                className="md:hidden flex items-center"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+            <motion.button
+            whileTap={{ scale: 0.60 }}
+            onClick={() => setOpen(!Open)}
+            className="md:hidden flex items-center"
             >
                 <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth="1.5" 
-                stroke="currentColor" 
-                className="size-6">
-                <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            </button>
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    strokeWidth="1.5" 
+                    stroke="currentColor" 
+                    className="size-6">
+                    <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" 
+                    />
+                </svg>
+            </motion.button>
 
             {/* Logo */}
             <div
@@ -68,20 +88,32 @@ const Header = () => {
             </nav>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <nav className="md:hidden absolute top-24 left-5 w-1/3 backdrop-blur-sm dabg-black/5 border border-li dark:border-impact">
-                    <ul className="flex flex-col items-start gap-4 p-4">
-                        < LightSwitchButton/>
-                    
-                        <LinkNav onClick={closeMenuOnCellphone} to="projects">
-                            プロジェクト
-                        </LinkNav>
-                        <LinkNav onClick={closeMenuOnCellphone} to="about">
-                        自己紹介
-                        </LinkNav>
-                    </ul>
-                </nav>
+            <AnimatePresence>
+            {Open && (
+                <motion.nav
+                    key={1}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    exit={{ opacity: 0, y: -5 }}
+                    ref={menuRef} // Attach ref to the mobile menu
+                    className="md:hidden absolute top-24 left-5 w-auto backdrop-blur-sm dabg-black/5 border border-li dark:border-impact"
+                >
+                        <motion.ul
+                        className="flex flex-row items-start gap-4 p-4">
+                            <motion.li>
+                                <LightSwitchButton className="px-2" />
+                            </motion.li>
+                                <LinkNav className="px-2" onClick={closeMenuOnCellphone} to="projects">
+                                    プロジェクト
+                                </LinkNav>
+                                <LinkNav className="px-2" onClick={closeMenuOnCellphone} to="about">
+                                    自己紹介
+                                </LinkNav>
+                        </motion.ul>
+                </motion.nav>
             )}
+            </AnimatePresence>
         </header>
     );
 };

@@ -21,9 +21,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="ja"
       className={clsx(notoSansJP.variable, "font-sans")}
       suppressHydrationWarning
+      title="LM Portofolio"
     >
       <head>
-        {/* Script to preload theme */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

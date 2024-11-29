@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative bg-lb dark:bg-background text-lt dark:text-primary">
+      <div className="relative bg-pimary dark:bg-background text-lt dark:text-primary">
         <div id="halo" className="halo-gradient absolute top-0 left-0 w-full h-[250px]"></div>
         <div className="relative container mx-auto text-lt dark:text-white p-4 pb-0 md:pb-0 md:p-4">
           <motion.div

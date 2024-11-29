@@ -34,7 +34,7 @@ const Header = () => {
 
 
     return (
-        <header className="flex flex-row items-center justify-between mt-8 mb-12 md:mb-16">
+        <header className="flex flex-row items-center justify-between mt-1 md:mt-4 mb-12 md:mb-16">
             {/* Mobile Menu Button */}
             <motion.button
             whileTap={{ scale: 0.60 }}

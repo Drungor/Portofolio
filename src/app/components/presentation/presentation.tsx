@@ -9,7 +9,7 @@ const Presentation: React.FC = () => {
       <section className="grid sm:grid-cols-12 md:mb-16 mb-8">
         <div 
         id="small-presentation" 
-        className="text-xl col-span-6 md:self-center ml-0 pl-0 m-4 p-2"
+        className="text-xl col-span-6 md:self-center ml-0 pl-0"
         >
           <h2 className="text-2xl lg:text-3xl sm:mb-6">プログラミング言語</h2>
           <div className="text-lg hidden sm:block">

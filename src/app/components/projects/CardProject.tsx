@@ -35,7 +35,10 @@ const CardProject: React.FC<CardProjectProps> = ({priority,image, alt, technolog
                             transform 
                             group-hover:scale-110 
                             transition-all 
-                            duration-500'
+                            duration-500
+                            grayscale
+                            group-hover:grayscale-0
+                           '
                             src={image}
                             alt={alt}
                             width={500}
@@ -46,7 +49,7 @@ const CardProject: React.FC<CardProjectProps> = ({priority,image, alt, technolog
                         className='
                         absolute 
                         inset-0 
-                        bg-li opacity-25  
+                        bg-li opacity-40  
                         dark:bg-impact dark:opacity-40 
                         transition-all 
                         duration-500 

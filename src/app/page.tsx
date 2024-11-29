@@ -6,7 +6,7 @@ import Header from "./components/header/header";
 import Hero from "./components/hero/Hero";
 import Presentation from "./components/presentation/presentation";
 import Projects from "./components/projects/projects";
-import Contact from "./components/contact/contact";
+import About from "./components/about/about";
 import "./globals.css";
 
 const fadeInVariants = {
@@ -85,7 +85,7 @@ export default function Home() {
               initial="hidden"
               animate={isContactInView ? "visible" : "hidden"}
             >
-              <Contact id="contact" />
+              <About id="about" />
             </motion.div>
           </motion.div>
           <motion.footer

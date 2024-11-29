@@ -62,7 +62,7 @@ const Header = () => {
             <nav className="hidden md:flex ml-auto">
                 <ul className="flex flex-row gap-6">
                     <LinkNav to="projects">プロジェクト</LinkNav>
-                    <LinkNav to="contact">コンタクト</LinkNav>
+                    <LinkNav to="about">自己紹介</LinkNav>
                     <LightSwitchButton/>
                 </ul>
             </nav>
@@ -76,8 +76,8 @@ const Header = () => {
                         <LinkNav onClick={closeMenuOnCellphone} to="projects">
                             プロジェクト
                         </LinkNav>
-                        <LinkNav onClick={closeMenuOnCellphone} to="contact">
-                            コンタクト
+                        <LinkNav onClick={closeMenuOnCellphone} to="about">
+                        自己紹介
                         </LinkNav>
                     </ul>
                 </nav>

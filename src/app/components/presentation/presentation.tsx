@@ -6,7 +6,7 @@ import imageLanguage from '../../data/imageData';
 const Presentation: React.FC = () => {
   return (
     <>
-      <section className="grid sm:grid-cols-12 gap-4 md:mb-16 mb-8">
+      <section className="grid sm:grid-cols-12 md:mb-16 mb-8">
         <div 
         id="small-presentation" 
         className="text-xl col-span-6 md:self-center ml-0 pl-0 m-4 p-2"
@@ -22,20 +22,21 @@ const Presentation: React.FC = () => {
             </p>
           </div>
         </div>
-        <div 
-        id="language" 
-        className="grid grid-cols-2 gap-4 col-span-6 justify-center"
-        >
-          {imageLanguage.map((lang) => (
-            <LanguageComponent
-              key={lang.id}
-              light={lang.light}
-              dark={lang.dark}
-              alt={lang.alt}
-              name={lang.name}
-            />
-          ))}
-        </div>
+        <div className="col-span-1"></div>
+          <div
+          id="language"
+          className="grid grid-cols-2 gap-4 col-span-5"
+          >
+            {imageLanguage.map((lang) => (
+              <LanguageComponent
+                key={lang.id}
+                light={lang.light}
+                dark={lang.dark}
+                alt={lang.alt}
+                name={lang.name}
+              />
+            ))}
+          </div>
       </section>
     </>
   );

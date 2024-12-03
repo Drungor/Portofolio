@@ -67,14 +67,14 @@ const Header = () => {
                         logoLanguage ? "translate-y-0 opacity-100" : "-translate-y-full opacity-40"
                     } transition-transform duration-500`}
                 >
-                    <span className="block">Leopold Antoine Maitre</span>
+                    <span className="block">Leopold Maitre</span>
                 </div>
                 <div
                     className={`absolute inset-0 flex items-center ${
                         logoLanguage ? "translate-y-full opacity-40" : "-translate-y-0 opacity-100"
                     } transition-transform duration-500`}
                 >
-                    <span className="block">メタ　レオポルド　アントワネ</span>
+                    <span className="block">メタ　レオポルド</span>
                 </div>
             </div>
 

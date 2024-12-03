@@ -91,7 +91,7 @@ export default function Home() {
             animate={isFooterInView ? "visible" : "hidden"}
             className=" text-li300 dark:text-impact300"
           >
-            <h2 className="justify-center opacity-80">🌐 レオポルド・メートル作成</h2>
+            <h2 className="justify-center opacity-80">🌐 メタ　レオポルド作成</h2>
           </motion.footer>
         </div>
       <section className="relative h-[60px]">

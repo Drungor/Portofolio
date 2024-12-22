@@ -3,13 +3,15 @@
 import { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import { Noto_Sans_JP } from "next/font/google";
 import clsx from "clsx";
+import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-noto-sans-jp",
 });
+
+
 
 interface RootLayoutProps {
   children: ReactNode;

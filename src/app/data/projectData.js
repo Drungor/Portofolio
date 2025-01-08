@@ -1,10 +1,10 @@
 const projectData = [
     { id: 1,
     technology: 'NextJs/tailwindcss', 
-    description: 'ポートフォリオ ',
+    description: 'Kamas.ink ',
     image: '/img/project1.png',
     alt: 'Project 1',
-    GitHub: 'https://github.com/Drungor/Portofolio',
+    GitHub: 'https://github.com/Drungor/kamas.ink',
     demo: 'https://demo.com',
     lastUpdate: '2024-10-01',
     priority:false},

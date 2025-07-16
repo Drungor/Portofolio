@@ -17,8 +17,8 @@ const hero = ({id}:HeroProps) => {
 <section className="text-3xl md:text-5xl">
         <p className={classNameMarginBottom}>こんにちは！ &#128075;</p>
         <h1 className={classNameMarginBottom}>レオポルドと申します。</h1>
-        <p className={classNameMarginBottom}>福岡でフロントエンドの仕事を探しています。</p>
-        <p className={`text-li dark:text-impact ${classNameMarginBottom}`}>どうぞよろしくお願いいたします。</p>
+        <p className={classNameMarginBottom}>福岡でバックエンドエンジニアとして働いています。</p>
+        <p className={`text-li dark:text-impact ${classNameMarginBottom}`}>サイドプロジェクトを探しています。どうぞよろしくお願いいたします。</p>
       </section>
       <section id="SNS" className=" flex md:mb-12">
         <Button  noLeftMargin className=" p-1 group ">

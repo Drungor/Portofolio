@@ -2,8 +2,17 @@
 
 import LanguageComponent from './LanguageComponent';
 import imageLanguage from '../../data/imageData';
+import { Code2, Code, Database, Atom, LucideIcon } from 'lucide-react';
 
 const Presentation: React.FC = () => {
+  // Map icon names to actual icon components
+  const iconMap: Record<string, LucideIcon> = {
+    Database,
+    Code,
+    Code2,
+    Atom
+  };
+
   return (
     <>
       <section className="grid sm:grid-cols-12 md:mb-16 mb-8">
@@ -15,7 +24,7 @@ const Presentation: React.FC = () => {
           <div className="text-lg hidden sm:block">
             <p>
               2023年9月からコーディングの勉強とウェブサイトの開発を始めました。<br/>
-              9月から現在まで主にHTML、CSS、Reactを中心に学習を進めてきました。<br/>
+              9月から現在まで主にSQL、C#、Reactを中心に学習を進めてきました。<br/>
               最近はフロントエンドとバックエンドの両方をコーディングできるように Next.jsの学習を開始しました。
               これからは、さらにスキルを向上させ、将来的にはフルスタックエンジニアになることを目指しています。<br/>
             </p>
@@ -29,10 +38,9 @@ const Presentation: React.FC = () => {
             {imageLanguage.map((lang) => (
               <LanguageComponent
                 key={lang.id}
-                light={lang.light}
-                dark={lang.dark}
-                alt={lang.alt}
                 name={lang.name}
+                icon={iconMap[lang.icon]}
+                color={lang.color}
               />
             ))}
           </div>

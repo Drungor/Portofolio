@@ -14,13 +14,11 @@ const fadeInVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {ease: "easeOut", duration: 0.5 },
+    transition: { ease: "easeOut", duration: 0.5 },
   },
 };
 
 export default function Home() {
-  console.log("Home component rendering...");
-
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const footerRef = useRef(null);
@@ -54,8 +52,8 @@ export default function Home() {
               <Header />
             </motion.div>
             <motion.div
-            key="Hero"
-            variants={fadeInVariants}>
+              key="Hero"
+              variants={fadeInVariants}>
               <Hero />
             </motion.div>
             <motion.div
@@ -94,7 +92,7 @@ export default function Home() {
             <h2 className="justify-center opacity-80">🌐 メタ　レオポルド作成</h2>
           </motion.footer>
         </div>
-      <section className="relative h-[60px]">
+        <section className="relative h-[60px]">
           <div
             id="halo-bottom"
             className="halo-gradient-bottom  h-full overflow-visible"

@@ -1,6 +1,3 @@
-const { label } = require('framer-motion/client');
-const { blob } = require('stream/consumers');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -17,14 +14,14 @@ module.exports = {
         blob: "blob 7s infinite",
       },
 
-      keyframes:{
+      keyframes: {
         blob: {
-          "0%" : {transform: "scale(1)"},
-          "20%": {transform: "scale(1.1)"},
-          "40%": {transform: "scale(1.2)"},
-          "60%": {transform: "scale(1.1)"},
-          "80%": {transform: "scale(0.9)"},
-          "100%": {transform: "scale(1)"}
+          "0%": { transform: "scale(1)" },
+          "20%": { transform: "scale(1.1)" },
+          "40%": { transform: "scale(1.2)" },
+          "60%": { transform: "scale(1.1)" },
+          "80%": { transform: "scale(0.9)" },
+          "100%": { transform: "scale(1)" }
         },
 
       },
@@ -51,7 +48,7 @@ module.exports = {
         impact700: "var(--color-impact-700)",
         impact900: "var(--color-impact-900)",
 
-        
+
       },
     },
   },

@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import Presentation from "./components/presentation/presentation";
 import Projects from "./components/projects/projects";
 import About from "./components/about/about";
+import VibeCoding from "./components/vibe-coding/VibeCoding";
 import "./globals.css";
 
 const fadeInVariants = {
@@ -61,6 +62,12 @@ export default function Home() {
               variants={fadeInVariants}
             >
               <Presentation />
+            </motion.div>
+            <motion.div
+              key="vibe-coding"
+              variants={fadeInVariants}
+            >
+              <VibeCoding />
             </motion.div>
             <motion.div
               key="projects"

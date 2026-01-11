@@ -12,8 +12,6 @@ const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
 });
 
-
-
 interface RootLayoutProps {
   children: ReactNode;
 }
@@ -45,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );

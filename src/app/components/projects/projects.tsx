@@ -1,11 +1,10 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import CardProject from './CardProject';
 import projectData from '../../data/projectData';
 
 interface ProjectsProps {
     id: string;
 }
-
 
 const Projects = ({ id }: ProjectsProps) => {
     return (
@@ -31,7 +30,5 @@ const Projects = ({ id }: ProjectsProps) => {
         </>
     );
 }
-
-
 
 export default Projects;

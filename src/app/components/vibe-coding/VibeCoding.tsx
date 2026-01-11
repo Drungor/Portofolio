@@ -27,17 +27,17 @@ const features = [
     {
         icon: Server,
         title: "MCP & CLI",
-        description: "Model Context Protocolサーバーの構築・運用。CLIツールの開発と自動化でワークフローを効率化。"
+        description: "MCPサーバーでAIとデータを接続。CLIで作業を自動化。"
     },
     {
         icon: MessageSquare,
         title: "プロンプト管理",
-        description: "Cursor、Claude Desktop、Antigravityを活用した効率的なプロンプトエンジニアリングと開発フロー。"
+        description: "Cursor・Claude Desktop・Antigravityで効率的にコードを生成。"
     },
     {
         icon: FileCode,
         title: "Spec-Driven Dev",
-        description: "Spec Kitを使った仕様駆動開発。明確な仕様からコードを生成し、品質と一貫性を確保。"
+        description: "Spec Kitで仕様を書き、AIがコードに変換。"
     }
 ];
 
@@ -46,7 +46,7 @@ const VibeCoding: React.FC = () => {
         <section className="md:mb-16 mb-10">
             <h2 className="text-2xl lg:text-3xl mb-4">AIアシスト開発</h2>
             <p className="text-lg text-lt/70 dark:text-primary/70 mb-8 max-w-2xl">
-                最新のAIツールを活用し、クリエイティブで効率的な開発を目指しています。
+                最新のAIツールで、より速く、より良いコードを書く。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {features.map((feature, index) => (
